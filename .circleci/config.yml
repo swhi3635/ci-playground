@@ -20,9 +20,6 @@ jobs:
     steps:
       - checkout
 
-      # Change into flask_web directory, where the app actually lives
-      - run: cd flask_web
-
       # Download and cache dependencies
       - restore_cache:
           keys:
