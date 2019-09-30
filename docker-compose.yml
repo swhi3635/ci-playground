@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  python-helloworld:
+    container_name: python-helloworld
+    image: swhi3635/python-helloworld:latest
+    ports:
+      - "5000:5000/tcp"
