@@ -49,7 +49,7 @@ jobs:
             TAG=latest
             IMAGE=python-helloworld
             docker build -t swhi3635/$IMAGE:$TAG .
-            docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
+            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
             docker push swhi3635/$IMAGE:$TAG
 
       # run tests!
